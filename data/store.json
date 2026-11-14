@@ -1,0 +1,463 @@
+{
+  "cafeSettings": {
+    "id": 1,
+    "cafeName": "Rindang Teduh Warkop",
+    "tagline": "Teduh Bernaung, Hangat Berbincang",
+    "storyTitle": "Lebih Dari Sekadar Tempat Duduk & Kopi",
+    "storyText": "Rindang Teduh lahir dari kerinduan akan ruang santai yang bersahaja namun berkarakter. Di tengah kesibukan perkuliahan dan padatnya kota, kami menyediakan kanopi alami untuk bertukar pikiran, mengerjakan proyek kreatif, atau menikmati hangatnya obrolan bersama teman.",
+    "features": [
+      "🌿 Ruang Terbuka Hijau",
+      "☕ Kopi & Kudapan Lokal",
+      "📱 Akses Menu NFC & QR",
+      "👥 Area Diskusi Komunitas",
+      "🪑 Kapasitas Hingga 80 Kursi"
+    ],
+    "address": "Jl. Srengseng Sawah No.17, Jagakarsa (Kawasan Kampus Politeknik Negeri Media Kreatif), Jakarta Selatan 12640.",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.317548918237!2d106.8249673!3d-6.3529245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec3e5f2cf2e7%3A0x6b696f8c7df94676!2sPoliteknik%20Negeri%20Media%20Kreatif!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid",
+    "mapsLinkUrl": "https://maps.google.com/?q=Politeknik+Negeri+Media+Kreatif+Jakarta",
+    "instagramUrl": "https://www.instagram.com/rindangteduh_/",
+    "whatsappNumber": "+6281234567890",
+    "operatingHours": {
+      "weekday": "08:00 - 22:00 WIB",
+      "weekend": "09:00 - 23:00 WIB",
+      "isOpenToday": true
+    },
+    "heroCaptionTitle": "Suasana Teduh & Semilir Angin Senja",
+    "heroCaptionDesc": "Dikelilingi pepohonan rindang dengan pencahayaan hangat saat malam tiba.",
+    "updatedAt": "2026-11-14T10:39:39.663Z"
+  },
+  "menuCategories": [
+    {
+      "id": "cat-1",
+      "name": "Kopi Signature",
+      "slug": "kopi-signature",
+      "sortOrder": 1,
+      "isActive": true
+    },
+    {
+      "id": "cat-2",
+      "name": "Warkop Klasik",
+      "slug": "warkop-klasik",
+      "sortOrder": 2,
+      "isActive": true
+    },
+    {
+      "id": "cat-3",
+      "name": "Non-Kopi & Teh",
+      "slug": "non-kopi-teh",
+      "sortOrder": 3,
+      "isActive": true
+    },
+    {
+      "id": "cat-4",
+      "name": "Makanan Berat",
+      "slug": "makanan-berat",
+      "sortOrder": 4,
+      "isActive": true
+    },
+    {
+      "id": "cat-5",
+      "name": "Camilan Gurih & Manis",
+      "slug": "camilan-gurih-manis",
+      "sortOrder": 5,
+      "isActive": true
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "item-1",
+      "categoryId": "cat-1",
+      "name": "Es Kopi Susu Rindang",
+      "description": "Racikan espresso biji robusta Temanggung dengan gula aren organik cair dan susu lembut.",
+      "price": 18000,
+      "imageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": true,
+      "isFeatured": true,
+      "sortOrder": 1,
+      "badge": "TERLARIS",
+      "tempOptions": [
+        "Dingin (Es)",
+        "Panas (Hot)"
+      ],
+      "updatedAt": "2026-11-14T10:39:39.666Z"
+    },
+    {
+      "id": "item-2",
+      "categoryId": "cat-1",
+      "name": "Kopi Tubruk Polimedia",
+      "description": "Seduhan tubruk klasik pekat beraroma karamel dan rempah tipis, teman diskusi tugas.",
+      "price": 12000,
+      "imageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 2,
+      "tempOptions": [
+        "Panas (Hot)"
+      ],
+      "updatedAt": "2026-11-14T10:51:01.273Z"
+    },
+    {
+      "id": "item-3",
+      "categoryId": "cat-2",
+      "name": "Indomie Kuah Kari Spesial",
+      "description": "Mi kuah kari hangat disajikan dengan telur setengah matang, sawi hijau, dan taburan bawang.",
+      "price": 15000,
+      "imageUrl": "https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 3,
+      "badge": "FAVORIT WARKOP",
+      "updatedAt": "2026-11-14T10:39:39.666Z"
+    },
+    {
+      "id": "item-4",
+      "categoryId": "cat-3",
+      "name": "Matcha Latte Canopy Ice",
+      "description": "Bubuk matcha Uji berkualitas dengan susu segar dingin dan pemanis alami madu hutan.",
+      "price": 22000,
+      "imageUrl": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": true,
+      "isFeatured": true,
+      "sortOrder": 4,
+      "tempOptions": [
+        "Dingin (Es)",
+        "Panas (Hot)"
+      ],
+      "updatedAt": "2026-11-14T10:39:39.666Z"
+    },
+    {
+      "id": "item-5",
+      "categoryId": "cat-4",
+      "name": "Nasi Kulit Sambal Bawang",
+      "description": "Nasi pulen hangat dengan kulit ayam goreng krispi renyah dan sambal bawang ulek segar.",
+      "price": 24000,
+      "imageUrl": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 5,
+      "updatedAt": "2026-11-14T10:39:39.666Z"
+    },
+    {
+      "id": "item-6",
+      "categoryId": "cat-5",
+      "name": "Pisang Bakar Cokelat Keju",
+      "description": "Pisang uli matang panggang beroles mentega, parutan keju cheddar melimpah, dan cokelat meses.",
+      "price": 16000,
+      "imageUrl": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": false,
+      "isFeatured": false,
+      "sortOrder": 6,
+      "updatedAt": "2026-11-14T10:40:34.236Z"
+    },
+    {
+      "id": "item-7",
+      "categoryId": "cat-5",
+      "name": "Roti Bakar Kaya Pandan",
+      "description": "Roti tebal panggang krispi beroleskan selai kaya pandan rumahan dan mentega wijen.",
+      "price": 16000,
+      "imageUrl": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": true,
+      "isFeatured": true,
+      "sortOrder": 7,
+      "badge": "RESEP NENEK",
+      "updatedAt": "2026-11-14T10:39:39.668Z"
+    },
+    {
+      "id": "item-8",
+      "categoryId": "cat-3",
+      "name": "Teh Tarik Rempah Hangat",
+      "description": "Teh hitam pekat ditarik dengan susu kental manis dan kapulaga, cengkeh wangi alami.",
+      "price": 14000,
+      "imageUrl": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=600&auto=format&fit=crop",
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 8,
+      "tempOptions": [
+        "Panas (Hot)",
+        "Dingin (Es)"
+      ],
+      "updatedAt": "2026-11-14T10:39:39.668Z"
+    }
+  ],
+  "reservationRules": {
+    "id": 1,
+    "isBookingOpen": true,
+    "minGuests": 5,
+    "maxGuests": 80,
+    "overCapacityMode": "WARNING",
+    "overCapacityNote": "Kapasitas kursi melebihi batas standar (80 orang). Pengajuan tetap kami terima, tim kami akan mengonfirmasi kesiapan kursi tambahan & layout meja via DM Instagram.",
+    "pricePerPerson": 25000,
+    "pricePerHour": 50000,
+    "baseFee": 0,
+    "availableDurations": [
+      2,
+      3,
+      4
+    ],
+    "availableTimeSlots": [
+      "10:00 WIB (Pagi)",
+      "14:00 WIB (Siang/Sore)",
+      "16:00 WIB (Sore)",
+      "19:00 WIB (Malam)"
+    ],
+    "termsAndConditions": [
+      "1. Pengajuan reservasi wajib diajukan minimal H-2 sebelum kegiatan.",
+      "2. Pembatalan tanpa biaya dapat dilakukan hingga H-1.",
+      "3. Fasilitas mencakup area kursi terpusat, sound standar, dan akses colokan listrik.",
+      "4. Dilarang membawa makanan berat dari luar tanpa izin pengelola."
+    ],
+    "updatedAt": "2026-11-14T10:39:39.668Z"
+  },
+  "reservations": [
+    {
+      "id": "res-1794652843924",
+      "bookingCode": "RT-2611-003",
+      "customerName": "Budi Hartono",
+      "customerPhone": "+6281987654321",
+      "bookingDate": "2026-11-20",
+      "bookingTime": "14:00 WIB",
+      "durationHours": 3,
+      "guestCount": 25,
+      "estimatedPrice": 775000,
+      "customerNotes": "Ruang kanopi outdoor",
+      "status": "REJECTED",
+      "privacyConsent": true,
+      "createdAt": "2026-11-14T10:40:43.924Z",
+      "processedBy": "Budi (Kasir Warkop)"
+    },
+    {
+      "id": "res-1",
+      "bookingCode": "RT-2611-042",
+      "customerName": "Ahmad Rizky (Komunitas Sastra)",
+      "customerPhone": "+62 812-3456-7890",
+      "bookingDate": "2026-11-15",
+      "bookingTime": "14:00 WIB",
+      "durationHours": 3,
+      "guestCount": 30,
+      "estimatedPrice": 900000,
+      "customerNotes": "Perlu 2 colokan listrik tambahan dan proyektor portable untuk presentasi.",
+      "status": "REJECTED",
+      "privacyConsent": true,
+      "createdAt": "2026-11-10T08:30:00.000Z",
+      "processedBy": "Budi (Kasir Warkop)"
+    },
+    {
+      "id": "res-2",
+      "bookingCode": "RT-2611-038",
+      "customerName": "Siti Nurhaliza (BEM Polimedia)",
+      "customerPhone": "+62 813-9876-5432",
+      "bookingDate": "2026-11-12",
+      "bookingTime": "16:00 WIB",
+      "durationHours": 2,
+      "guestCount": 20,
+      "estimatedPrice": 600000,
+      "customerNotes": "Rapat koordinasi festival kampus, mohon area kanopi tengah.",
+      "status": "CONFIRMED",
+      "privacyConsent": true,
+      "createdAt": "2026-11-08T11:00:00.000Z",
+      "processedBy": "Owner"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-owner",
+      "email": "owner@rindangteduh.com",
+      "fullName": "Agus (Owner)",
+      "role": "OWNER",
+      "isActive": true,
+      "password": "password123",
+      "lastLoginAt": "2026-11-14T12:07:48.564Z"
+    },
+    {
+      "id": "usr-mgmt",
+      "email": "dailami@rindangteduh.com",
+      "fullName": "Muhammad Dailami (Manajemen)",
+      "role": "MANAGEMENT",
+      "isActive": true,
+      "password": "password123",
+      "lastLoginAt": "2026-11-14T12:56:05.240Z"
+    },
+    {
+      "id": "usr-cashier",
+      "email": "kasir@rindangteduh.com",
+      "fullName": "Budi (Kasir Warkop)",
+      "role": "CASHIER",
+      "isActive": true,
+      "password": "password123"
+    },
+    {
+      "id": "usr-dev",
+      "email": "developer@rindangteduh.com",
+      "fullName": "Hisyam (Developer)",
+      "role": "DEVELOPER",
+      "isActive": true,
+      "password": "password123"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log-1794660965240-670",
+      "userName": "Muhammad Dailami (Manajemen)",
+      "userRole": "MANAGEMENT",
+      "actionType": "LOGIN_SUCCESS",
+      "description": "Pengguna berhasil login sebagai MANAGEMENT.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+      "createdAt": "2026-11-14T12:56:05.240Z"
+    },
+    {
+      "id": "log-1794660708991-318",
+      "userName": "Muhammad Dailami (Manajemen)",
+      "userRole": "MANAGEMENT",
+      "actionType": "LOGIN_SUCCESS",
+      "description": "Pengguna berhasil login sebagai MANAGEMENT.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.6456",
+      "createdAt": "2026-11-14T12:51:48.991Z"
+    },
+    {
+      "id": "log-1794660353332-942",
+      "userName": "Staf",
+      "userRole": "STAFF",
+      "actionType": "LOGOUT",
+      "description": "Pengguna Staf keluar dari sistem (logout).",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+      "createdAt": "2026-11-14T12:45:53.332Z"
+    },
+    {
+      "id": "log-1794659808766-406",
+      "userName": "Agus (Owner)",
+      "userRole": "OWNER",
+      "actionType": "LOGOUT",
+      "description": "Pengguna Agus (Owner) keluar dari sistem (logout).",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+      "createdAt": "2026-11-14T12:36:48.766Z"
+    },
+    {
+      "id": "log-1794658068564-854",
+      "userName": "Agus (Owner)",
+      "userRole": "OWNER",
+      "actionType": "LOGIN_SUCCESS",
+      "description": "Pengguna berhasil login sebagai OWNER.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+      "createdAt": "2026-11-14T12:07:48.564Z"
+    },
+    {
+      "id": "log-1794655786256-980",
+      "userName": "Agus (Owner)",
+      "userRole": "OWNER",
+      "actionType": "LOGIN_SUCCESS",
+      "description": "Pengguna berhasil login sebagai OWNER.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.6456",
+      "createdAt": "2026-11-14T11:29:46.256Z"
+    },
+    {
+      "id": "log-1794655671261-292",
+      "userName": "Agus (Owner)",
+      "userRole": "OWNER",
+      "actionType": "LOGIN_SUCCESS",
+      "description": "Pengguna berhasil login sebagai OWNER.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.6456",
+      "createdAt": "2026-11-14T11:27:51.261Z"
+    },
+    {
+      "id": "log-1794655656166-784",
+      "userName": "Agus (Owner)",
+      "userRole": "OWNER",
+      "actionType": "LOGIN_SUCCESS",
+      "description": "Pengguna berhasil login sebagai OWNER.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.6456",
+      "createdAt": "2026-11-14T11:27:36.166Z"
+    },
+    {
+      "id": "log-1794655650665-538",
+      "userName": "owner@rindangteduh.com",
+      "userRole": "GUEST",
+      "actionType": "LOGIN_FAILED",
+      "description": "Percobaan login gagal untuk email 'owner@rindangteduh.com'.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.6456",
+      "createdAt": "2026-11-14T11:27:30.665Z"
+    },
+    {
+      "id": "log-1794653461273-701",
+      "userName": "Agus (Owner)",
+      "userRole": "OWNER",
+      "actionType": "STOCK_TOGGLE",
+      "description": "Mengubah stok 'Kopi Tubruk Polimedia' menjadi Tersedia.",
+      "createdAt": "2026-11-14T10:51:01.273Z"
+    },
+    {
+      "id": "log-1794653180257-983",
+      "userName": "Budi (Kasir Warkop)",
+      "userRole": "CASHIER",
+      "actionType": "RESERVATION_STATUS_CHANGE",
+      "description": "Mengubah status reservasi [RT-2611-042] dari PENDING menjadi REJECTED.",
+      "createdAt": "2026-11-14T10:46:20.257Z"
+    },
+    {
+      "id": "log-1794653179374-523",
+      "userName": "Budi (Kasir Warkop)",
+      "userRole": "CASHIER",
+      "actionType": "RESERVATION_STATUS_CHANGE",
+      "description": "Mengubah status reservasi [RT-2611-003] dari PENDING menjadi REJECTED.",
+      "createdAt": "2026-11-14T10:46:19.374Z"
+    },
+    {
+      "id": "log-1794653174101-181",
+      "userName": "Budi (Kasir Warkop)",
+      "userRole": "CASHIER",
+      "actionType": "STOCK_TOGGLE",
+      "description": "Mengubah stok 'Kopi Tubruk Polimedia' menjadi Habis.",
+      "createdAt": "2026-11-14T10:46:14.101Z"
+    },
+    {
+      "id": "log-1794652843924-859",
+      "userName": "Pengunjung",
+      "userRole": "PUBLIC",
+      "actionType": "RESERVATION_CREATE",
+      "description": "Pengajuan reservasi baru [RT-2611-003] oleh Budi Hartono (25 orang).",
+      "createdAt": "2026-11-14T10:40:43.924Z"
+    },
+    {
+      "id": "log-1794652834236-663",
+      "userName": "Kasir",
+      "userRole": "CASHIER",
+      "actionType": "STOCK_TOGGLE",
+      "description": "Mengubah stok 'Pisang Bakar Cokelat Keju' menjadi Habis.",
+      "createdAt": "2026-11-14T10:40:34.236Z"
+    },
+    {
+      "id": "log-1794652822439-337",
+      "userName": "Kasir",
+      "userRole": "CASHIER",
+      "actionType": "STOCK_TOGGLE",
+      "description": "Mengubah stok 'Pisang Bakar Cokelat Keju' menjadi Tersedia.",
+      "createdAt": "2026-11-14T10:40:22.439Z"
+    },
+    {
+      "id": "log-2",
+      "userId": "usr-cashier",
+      "userName": "Budi (Kasir Warkop)",
+      "userRole": "CASHIER",
+      "actionType": "STOCK_UPDATE",
+      "description": "Mengubah stok menu 'Pisang Bakar Cokelat Keju' menjadi Habis.",
+      "createdAt": "2026-11-10T14:15:00.000Z"
+    },
+    {
+      "id": "log-1",
+      "userId": "usr-owner",
+      "userName": "Agus (Owner)",
+      "userRole": "OWNER",
+      "actionType": "SYSTEM_INIT",
+      "description": "Inisialisasi sistem database Rindang Teduh Web & CMS v1.0.",
+      "createdAt": "2026-11-09T03:00:00.000Z"
+    }
+  ]
+}

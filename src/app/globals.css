@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest-night: #0B1410;
+    --color-canopy: #14231B;
+    --color-deep-forest: #244333;
+    --color-moss: #74866A;
+    --color-matcha-mist: #B8C7A3;
+    --color-warm-cream: #F2EEE3;
+    --color-paper: #FCFAF5;
+    --color-ink: #202820;
+    --color-muted-ink: #626B60;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-ink);
+    background-color: var(--color-forest-night);
+  }
+
+  body {
+    min-height: 100vh;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* R-39 cursor: pointer requirement */
+  a[href],
+  button,
+  summary,
+  select,
+  label[for],
+  label:has(input[type="checkbox"]),
+  label:has(input[type="radio"]),
+  input[type="checkbox"],
+  input[type="radio"],
+  [role="button"],
+  [role="tab"],
+  [role="switch"] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  input:disabled,
+  select:disabled,
+  textarea:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* R-32 Keyboard Accessibility & visible focus indicator */
+  :focus-visible {
+    outline: 2px solid #B8C7A3;
+    outline-offset: 2px;
+  }
+
+  /* R-39 Prefers-reduced-motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
