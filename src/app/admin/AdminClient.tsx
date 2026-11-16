@@ -558,13 +558,19 @@ export function AdminClient({
                   className="bg-white p-4 rounded-xl border border-[#DDD6C6] shadow-sm flex items-center justify-between gap-3 hover:border-moss/60 transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <img
-                      src={item.imageUrl}
-                      alt={item.name}
-                      width={52}
-                      height={52}
-                      className="w-13 h-13 rounded-lg object-cover bg-[#EAE5D9] border"
-                    />
+                    {item.imageUrl ? (
+                      <img
+                        src={item.imageUrl}
+                        alt={item.name}
+                        width={52}
+                        height={52}
+                        className="w-13 h-13 rounded-lg object-cover bg-[#EAE5D9] border"
+                      />
+                    ) : (
+                      <div className="w-13 h-13 rounded-lg bg-[#EAE5D9] border border-[#DDD6C6] flex items-center justify-center text-moss font-bold text-xs uppercase">
+                        {item.name.slice(0, 2)}
+                      </div>
+                    )}
                     <div>
                       <h3 className="font-medium text-sm text-ink">{item.name}</h3>
                       <span className="text-xs text-muted-ink font-mono">
@@ -845,13 +851,19 @@ export function AdminClient({
                       return (
                         <tr key={item.id} className="hover:bg-amber-50/40">
                           <td className="p-3">
-                            <img
-                              src={item.imageUrl}
-                              alt={item.name}
-                              width={44}
-                              height={44}
-                              className="w-11 h-11 rounded object-cover bg-[#EAE5D9] border"
-                            />
+                            {item.imageUrl ? (
+                              <img
+                                src={item.imageUrl}
+                                alt={item.name}
+                                width={44}
+                                height={44}
+                                className="w-11 h-11 rounded object-cover bg-[#EAE5D9] border"
+                              />
+                            ) : (
+                              <div className="w-11 h-11 rounded bg-[#EAE5D9] border border-[#DDD6C6] flex items-center justify-center text-moss font-bold text-xs uppercase">
+                                {item.name.slice(0, 2)}
+                              </div>
+                            )}
                           </td>
                           <td className="p-3">
                             <strong className="block text-ink">{item.name}</strong>

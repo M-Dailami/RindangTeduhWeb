@@ -40,6 +40,7 @@ export interface CafeSettings {
   instagramUrl: string;
   whatsappNumber: string;
   operatingHours: OperatingHours;
+  heroImageUrl?: string;
   heroCaptionTitle: string;
   heroCaptionDesc: string;
   updatedAt: string;
@@ -56,10 +57,11 @@ export interface MenuCategory {
 export interface MenuItem {
   id: string;
   categoryId: string;
+  subcategory?: string;
   name: string;
   description: string;
   price: number;
-  imageUrl: string;
+  imageUrl?: string;
   isAvailable: boolean;
   isFeatured: boolean;
   sortOrder: number;

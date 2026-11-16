@@ -81,12 +81,12 @@ export default async function HomePage() {
                   {/* Hero Image */}
                   <div className="relative aspect-[4/3] w-full bg-deep-forest overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop"
+                      src={settings.heroImageUrl || "/images/rindang-teduh-hero.jpg"}
                       alt="Suasana Teduh di Kafe Rindang Teduh Warkop"
                       width={1200}
                       height={900}
                       fetchPriority="high"
-                      className="w-full h-full object-cover opacity-85 hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-canopy via-transparent to-transparent opacity-80" />
                   </div>
@@ -191,21 +191,34 @@ export default async function HomePage() {
                   key={item.id}
                   className="bg-paper rounded-xl overflow-hidden border border-[#DDD6C6] shadow-sm hover:shadow-md transition-shadow flex flex-col"
                 >
-                  {/* Image */}
-                  <div className="relative aspect-[4/3] w-full bg-[#EAE5D9] overflow-hidden">
-                    <img
-                      src={item.imageUrl}
-                      alt={item.name}
-                      width={600}
-                      height={450}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    {item.badge && (
-                      <span className="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-deep-forest text-matcha-mist">
-                        {item.badge}
-                      </span>
-                    )}
-                  </div>
+                  {/* Image or Header Accent */}
+                  {item.imageUrl ? (
+                    <div className="relative aspect-[4/3] w-full bg-[#EAE5D9] overflow-hidden">
+                      <img
+                        src={item.imageUrl}
+                        alt={item.name}
+                        width={600}
+                        height={450}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                      {item.badge && (
+                        <span className="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-deep-forest text-matcha-mist">
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="p-6 pb-0 flex items-center justify-between">
+                      <div className="w-10 h-10 rounded-lg bg-[#EAE5D9] flex items-center justify-center text-moss">
+                        <Coffee className="w-5 h-5" aria-hidden="true" />
+                      </div>
+                      {item.badge && (
+                        <span className="px-2.5 py-1 rounded text-[10px] font-bold tracking-wider uppercase bg-deep-forest text-matcha-mist">
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+                  )}
 
                   {/* Card Content */}
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">

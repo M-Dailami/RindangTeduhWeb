@@ -208,16 +208,15 @@ export async function saveMenuItem(
   const menuItemObj: MenuItem = {
     id,
     categoryId: item.categoryId,
+    subcategory: item.subcategory || "",
     name: item.name,
     description: item.description || "",
     price: Number(item.price) || 0,
-    imageUrl:
-      item.imageUrl ||
-      "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600&auto=format&fit=crop",
+    imageUrl: item.imageUrl || "",
     isAvailable: item.isAvailable !== undefined ? item.isAvailable : true,
     isFeatured: item.isFeatured !== undefined ? item.isFeatured : false,
     sortOrder: item.sortOrder ?? (store.menuItems.length + 1),
-    tempOptions: item.tempOptions || ["Dingin (Es)", "Panas (Hot)"],
+    tempOptions: item.tempOptions || [],
     badge: item.badge || "",
     updatedAt: new Date().toISOString(),
   };
