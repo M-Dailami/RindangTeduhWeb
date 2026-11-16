@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -8,6 +8,46 @@ import { Menu, X, ArrowRight } from "lucide-react";
 export function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeHomeSection, setActiveHomeSection] = useState<"profil" | "lokasi">("profil");
+  const hasEnteredLocation = useRef(false);
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    const updateActiveSection = () => {
+      const locationSection = document.getElementById("lokasi");
+      const header = document.querySelector("header");
+      if (!locationSection) return;
+
+      const activationLine = header?.getBoundingClientRect().bottom ?? 0;
+      const locationIsActive = locationSection.getBoundingClientRect().top <= activationLine;
+      setActiveHomeSection(locationIsActive ? "lokasi" : "profil");
+
+      if (locationIsActive) {
+        hasEnteredLocation.current = true;
+      } else if (hasEnteredLocation.current) {
+        hasEnteredLocation.current = false;
+        if (window.location.hash === "#lokasi") {
+          window.history.replaceState(
+            window.history.state,
+            "",
+            `${window.location.pathname}${window.location.search}`
+          );
+        }
+      }
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("hashchange", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("hashchange", updateActiveSection);
+    };
+  }, [pathname]);
 
   const navLinks = [
     { label: "PROFIL CAFE", href: "/" },
@@ -17,19 +57,23 @@ export function Navbar() {
   ];
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    if (href.startsWith("/#")) return false;
+    if (href === "/") return pathname === "/" && activeHomeSection === "profil";
+    if (href.startsWith("/#")) {
+      return pathname === "/" && activeHomeSection === "lokasi";
+    }
     return pathname.startsWith(href);
   };
+
+  const showBookingAction = pathname !== "/reservasi";
 
   return (
     <header className="sticky top-0 z-50 bg-forest-night/95 backdrop-blur-md border-b border-canopy/80 text-warm-cream transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center h-20">
           {/* Logo & Brand Identity */}
           <Link
             href="/"
-            className="flex items-center gap-3 group focus-visible:ring-2 focus-visible:ring-matcha-mist rounded-sm p-1"
+            className="flex items-center gap-3 justify-self-start group focus-visible:ring-2 focus-visible:ring-matcha-mist rounded-sm p-1"
             aria-label="Rindang Teduh Warkop - Beranda"
           >
             <div className="w-10 h-10 rounded-full bg-deep-forest border border-moss/60 flex items-center justify-center text-matcha-mist shadow-inner group-hover:border-matcha-mist transition-colors">
@@ -60,7 +104,7 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden md:flex items-center space-x-8"
+            className="hidden lg:flex items-center justify-self-center space-x-8"
             aria-label="Navigasi Utama"
           >
             {navLinks.map((link) => {
@@ -85,18 +129,20 @@ export function Navbar() {
           </nav>
 
           {/* Desktop Action Button */}
-          <div className="hidden md:flex items-center">
-            <Link
-              href="/reservasi"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-md border border-moss/70 text-warm-cream hover:bg-deep-forest hover:border-matcha-mist hover:text-paper transition-all focus-visible:ring-2 focus-visible:ring-matcha-mist"
-            >
-              <span>Booking Tempat</span>
-              <ArrowRight className="w-3.5 h-3.5 text-matcha-mist" aria-hidden="true" />
-            </Link>
-          </div>
+          {showBookingAction && (
+            <div className="hidden lg:flex items-center justify-self-end">
+              <Link
+                href="/reservasi"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-md border border-moss/70 text-warm-cream hover:bg-deep-forest hover:border-matcha-mist hover:text-paper transition-all focus-visible:ring-2 focus-visible:ring-matcha-mist"
+              >
+                <span>Booking Tempat</span>
+                <ArrowRight className="w-3.5 h-3.5 text-matcha-mist" aria-hidden="true" />
+              </Link>
+            </div>
+          )}
 
           {/* Mobile Menu Trigger */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center justify-self-end gap-2">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -116,7 +162,7 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-canopy bg-forest-night px-4 pt-3 pb-6 space-y-3">
+        <div className="lg:hidden border-t border-canopy bg-forest-night px-4 pt-3 pb-6 space-y-3">
           <nav className="flex flex-col space-y-2" aria-label="Navigasi Mobile">
             {navLinks.map((link) => {
               const active = isActive(link.href);
@@ -136,16 +182,18 @@ export function Navbar() {
               );
             })}
           </nav>
-          <div className="pt-2">
-            <Link
-              href="/reservasi"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold tracking-wider uppercase rounded-md bg-deep-forest border border-moss/80 text-warm-cream hover:bg-deep-forest/80 min-h-[44px]"
-            >
-              <span>Booking Tempat</span>
-              <ArrowRight className="w-4 h-4 text-matcha-mist" aria-hidden="true" />
-            </Link>
-          </div>
+          {showBookingAction && (
+            <div className="pt-2">
+              <Link
+                href="/reservasi"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold tracking-wider uppercase rounded-md bg-deep-forest border border-moss/80 text-warm-cream hover:bg-deep-forest/80 min-h-[44px]"
+              >
+                <span>Booking Tempat</span>
+                <ArrowRight className="w-4 h-4 text-matcha-mist" aria-hidden="true" />
+              </Link>
+            </div>
+          )}
         </div>
       )}
     </header>

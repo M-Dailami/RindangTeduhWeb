@@ -309,7 +309,7 @@ export default async function HomePage() {
         </section>
 
         {/* LOKASI & WAKTU SECTION */}
-        <section id="lokasi" className="py-20 bg-forest-night">
+        <section id="lokasi" className="scroll-mt-20 py-20 bg-forest-night">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div>
               <span className="text-xs uppercase tracking-widest text-moss font-semibold block">
@@ -320,9 +320,9 @@ export default async function HomePage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch rounded-2xl overflow-hidden border border-moss/30 bg-canopy">
               {/* Left Column: Details */}
-              <div className="lg:col-span-6 bg-canopy p-8 rounded-2xl border border-moss/30 flex flex-col justify-between space-y-8">
+              <div className="p-6 sm:p-8 flex flex-col justify-between space-y-8">
                 <div className="space-y-6">
                   <div>
                     <span className="text-xs uppercase tracking-wider text-moss font-semibold block mb-2">
@@ -376,7 +376,7 @@ export default async function HomePage() {
               </div>
 
               {/* Right Column: Map Embed / Box */}
-              <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-moss/30 bg-canopy relative min-h-[300px] flex items-center justify-center">
+              <div className="relative min-h-[300px] flex items-center justify-center border-t border-moss/30 lg:border-t-0 lg:border-l">
                 <div className="text-center p-8 space-y-3">
                   <div className="w-14 h-14 rounded-full bg-deep-forest border border-moss flex items-center justify-center text-matcha-mist mx-auto">
                     <MapPin className="w-7 h-7" aria-hidden="true" />
