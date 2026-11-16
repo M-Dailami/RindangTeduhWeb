@@ -210,6 +210,21 @@
   },
   "reservations": [
     {
+      "id": "res-1794802842316",
+      "bookingCode": "RT-2611-004",
+      "customerName": "Ahmad Rizky (Komunitas Sastra)",
+      "customerPhone": "+62 812-3456-7890",
+      "bookingDate": "2026-11-16",
+      "bookingTime": "14:00 WIB (Siang/Sore)",
+      "durationHours": 3,
+      "guestCount": 30,
+      "estimatedPrice": 900000,
+      "customerNotes": "Perlu 2 colokan listrik tambahan dan proyektor portable untuk presentasi.",
+      "status": "PENDING",
+      "privacyConsent": true,
+      "createdAt": "2026-11-16T04:20:42.316Z"
+    },
+    {
       "id": "res-1794652843924",
       "bookingCode": "RT-2611-003",
       "customerName": "Budi Hartono",
@@ -291,10 +306,41 @@
       "fullName": "Hisyam (Developer)",
       "role": "DEVELOPER",
       "isActive": true,
-      "password": "password123"
+      "password": "password123",
+      "lastLoginAt": "2026-11-16T07:25:13.375Z"
     }
   ],
   "activityLogs": [
+    {
+      "id": "log-1794813974783-784",
+      "userName": "Hisyam (Developer)",
+      "userRole": "DEVELOPER",
+      "actionType": "LOGOUT",
+      "description": "Pengguna Hisyam (Developer) keluar dari sistem (logout).",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+      "createdAt": "2026-11-16T07:26:14.783Z"
+    },
+    {
+      "id": "log-1794813913376-939",
+      "userName": "Hisyam (Developer)",
+      "userRole": "DEVELOPER",
+      "actionType": "LOGIN_SUCCESS",
+      "description": "Pengguna berhasil login sebagai DEVELOPER.",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+      "createdAt": "2026-11-16T07:25:13.376Z"
+    },
+    {
+      "id": "log-1794802842316-242",
+      "userName": "Ahmad Rizky (Komunitas Sastra)",
+      "userRole": "PUBLIC",
+      "actionType": "RESERVATION_CREATE",
+      "description": "Pengajuan reservasi baru [RT-2611-004] (30 orang).",
+      "ipAddress": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+      "createdAt": "2026-11-16T04:20:42.316Z"
+    },
     {
       "id": "log-1794660965240-670",
       "userName": "Muhammad Dailami (Manajemen)",
